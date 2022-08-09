@@ -1,4 +1,4 @@
-package com.rast;
+package com.rast.model;
 
 /**
  * @author goumang
