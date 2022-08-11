@@ -35,6 +35,8 @@ public class For {
                 new Student("rocy", 17),
                 new Student("katrrin", 19)
         );
+        // 被注释的代码会出现问题，因为不可变 (不信你可以打开注释运行下试试
+        // students1.add(new Student());
 
         // 使用hutool 工具来初始化 （可变）
         ArrayList<Student> students2 = CollUtil.newArrayList(
@@ -46,6 +48,7 @@ public class For {
         // 被注释的代码会出现问题，因为不可变 (不信你可以打开注释运行下试试
         // students1.add(new Student());
         students2.add(new Student());
+
     }
 
 
