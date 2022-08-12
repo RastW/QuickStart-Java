@@ -11,6 +11,8 @@ public class lianxi {
 
       SpringApplication.run(lianxi.class,args);
 
+      /**/
+
     }
 }
 
