@@ -29,8 +29,8 @@ public class For {
         students.add(new Student("rocy", 17));
         students.add(new Student("katrrin", 19));
 
-        // 15 - 19 的代码用JDK1.8的方式重写(不可变）
-        final List<Student> students1 = List.of(
+        // 33 - 37 的代码用JDK1.8的方式重写(不可变）
+        List<Student> students1 = List.of(
                 new Student("jack", 18),
                 new Student("rocy", 17),
                 new Student("katrrin", 19)

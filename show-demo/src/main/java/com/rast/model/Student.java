@@ -11,11 +11,32 @@ public class Student {
 
     private int age;
 
-    public Student() {}
+    private int wallet;
+
+    public Student() {
+    }
 
     public Student(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public Student(String name, int age, int wallet) {
+        this.name = name;
+        this.age = age;
+        this.wallet = wallet;
+    }
+
+    /**
+     * @param amount
+     * @return 是否扣钱成功
+     */
+    public boolean getQian(int amount) {
+        if (wallet < amount) {
+            return false;
+        }
+        wallet = wallet - amount;
+        return true;
     }
 
     public String getName() {
@@ -32,5 +53,14 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getWallet() {
+        return wallet;
+    }
+
+    public Student setWallet(int wallet) {
+        this.wallet = wallet;
+        return this;
     }
 }

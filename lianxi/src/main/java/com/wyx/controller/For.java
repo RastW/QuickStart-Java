@@ -30,8 +30,8 @@ public class For {
                 new Student("xuesheng",10),
                 new Student("tayeye",60)
         );
-        // List.of()方法不可重写吗
-        //students1.add(new Student()为什么这里可以传送空参数 是应为那会写了两个方法吗);
+        // List.of()方法不可变
+        //students1.add(new Student()为什么这里可以传送空参数 是应为那会写了两个方法吗, 是的！);
 
         ArrayList<Student> students2 = CollUtil.newArrayList(
                 new Student("tadie",30),
@@ -39,19 +39,32 @@ public class For {
                 new Student("tayeye",60)
         );
 
+        // 初始化
         students2.add(new Student());
-
     }
 
     public static void ZengQianglist(){
-        List<Integer> list = List.of(1,35,657,23,76,4562,324,55);
+        List<Integer> list = List.of(
+                // 下标，index，List 下标不是从1开始，而是从0开始
+                1,          // 0
+                35,         // 1
+                657,        // 2
+                23,         // 3
+                76,         // 4
+                4562,       // 5
+                324,        // 6
+                55          // 7
+        );
+        int sum = 0;
 
         // list.size()这是一个什么方法
-        for (int i = 0; i < list.size();i++){
+        for (int i = 0; i < list.size(); i++){
             System.out.println("for:"+list.get(i));
         }
 
+        int sum2 = 0;
         for (Integer integer : list){
+            sum2 += integer;
             System.out.println("增强for:"+ integer);
         }
 
@@ -60,7 +73,6 @@ public class For {
         while(iterator.hasNext()){
             Integer next = iterator.next();
             System.out.println("迭代器:" + next);
-
         }
 
         list.forEach(
