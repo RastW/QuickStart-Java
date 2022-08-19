@@ -27,17 +27,7 @@ public class Student {
         this.wallet = wallet;
     }
 
-    /**
-     * @param amount
-     * @return 是否扣钱成功
-     */
-    public boolean getQian(int amount) {
-        if (wallet < amount) {
-            return false;
-        }
-        wallet = wallet - amount;
-        return true;
-    }
+
 
     public String getName() {
         return name;
